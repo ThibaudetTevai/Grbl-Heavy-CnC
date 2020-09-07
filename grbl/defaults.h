@@ -477,14 +477,14 @@
   #define DEFAULT_AXIS1_ACCELERATION (50.0*60*60) // 300*60*60 mm/min^2 = 300 mm/sec^2
   #define DEFAULT_AXIS2_ACCELERATION (50.0*60*60) // 300*60*60 mm/min^2 = 300 mm/sec^2
   #define DEFAULT_AXIS3_ACCELERATION (50.0*60*60) // 100*60*60 mm/min^2 = 100 mm/sec^2
-  #define DEFAULT_AXIS1_MAX_TRAVEL 400.0 // mm
-  #define DEFAULT_AXIS2_MAX_TRAVEL 200.0 // mm
-  #define DEFAULT_AXIS3_MAX_TRAVEL 200.0 // mm
+  #define DEFAULT_AXIS1_MAX_TRAVEL 780.0 // mm
+  #define DEFAULT_AXIS2_MAX_TRAVEL 780.0 // mm
+  #define DEFAULT_AXIS3_MAX_TRAVEL 150.0 // mm
   #if N_AXIS > 3
-    #define DEFAULT_AXIS4_STEPS_PER_UNIT 8.888889 // Direct drive : (200 pas par tours * 1/16 microsteps)/360°
-    #define DEFAULT_AXIS4_MAX_RATE 1440 // °/mn
-    #define DEFAULT_AXIS4_ACCELERATION (50.0*60*60) // 100*60*60 mm/min^2 = 100 mm/sec^2
-    #define DEFAULT_AXIS4_MAX_TRAVEL 360.0 // °
+    #define DEFAULT_AXIS4_STEPS_PER_UNIT DEFAULT_AXIS2_STEPS_PER_UNIT // Direct drive : (200 pas par tours * 1/16 microsteps)/360°
+    #define DEFAULT_AXIS4_MAX_RATE DEFAULT_AXIS2_MAX_RATE // °/mn
+    #define DEFAULT_AXIS4_ACCELERATION DEFAULT_AXIS2_ACCELERATION // 100*60*60 mm/min^2 = 100 mm/sec^2
+    #define DEFAULT_AXIS4_MAX_TRAVEL DEFAULT_AXIS2_MAX_TRAVEL // °
   #endif
   #if N_AXIS > 4
     #define DEFAULT_AXIS5_STEPS_PER_UNIT 8.888889 // Direct drive : (200 pas par tours * 1/16 microsteps)/360°
