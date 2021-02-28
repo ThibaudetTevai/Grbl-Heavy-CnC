@@ -454,15 +454,15 @@
 #endif
 
 #ifdef DEFAULTS_RAMPS_BOARD
-  #define MICROSTEPS_AXIS1 4     // Microstepping = 1/4 pas
+  #define MICROSTEPS_AXIS1 8     // Microstepping = 1/4 pas
   #define STEP_REVS_AXIS1 200    // Moteurs à 200 pas par tour
   #define UNIT_PER_REV_AXIS1 2.0 // 2mm
   #define DEFAULT_AXIS1_STEPS_PER_UNIT (MICROSTEPS_AXIS1*STEP_REVS_AXIS1/UNIT_PER_REV_AXIS1) // 400
-  #define MICROSTEPS_AXIS2 4     // Microstepping = 1/4 pas
+  #define MICROSTEPS_AXIS2 8     // Microstepping = 1/4 pas
   #define STEP_REVS_AXIS2 200    // Moteurs à 200 pas par tour
   #define UNIT_PER_REV_AXIS2 2.0 // 2mm
   #define DEFAULT_AXIS2_STEPS_PER_UNIT (MICROSTEPS_AXIS2*STEP_REVS_AXIS2/UNIT_PER_REV_AXIS2)
-  #define MICROSTEPS_AXIS3 4     // Microstepping = 1/4 pas
+  #define MICROSTEPS_AXIS3 8     // Microstepping = 1/4 pas
   #define STEP_REVS_AXIS3 200    // Moteurs à 200 pas par tour
   #define UNIT_PER_REV_AXIS3 2.0 // 2mm
   #define DEFAULT_AXIS3_STEPS_PER_UNIT (MICROSTEPS_AXIS3*STEP_REVS_AXIS3/UNIT_PER_REV_AXIS3)
@@ -502,7 +502,7 @@
   #define DEFAULT_SPINDLE_RPM_MIN 550.0 // rpm
   #define DEFAULT_STEP_PULSE_MICROSECONDS 10
   #define DEFAULT_STEPPING_INVERT_MASK 0
-  #define DEFAULT_DIRECTION_INVERT_MASK 0
+  #define DEFAULT_DIRECTION_INVERT_MASK 5
   #define DEFAULT_STEPPER_IDLE_LOCK_TIME 254 // msec (0-254, 255 keeps steppers enabled)
   #define DEFAULT_STATUS_REPORT_MASK 1 // MPos enabled
   #define DEFAULT_JUNCTION_DEVIATION 0.02 // mm
@@ -510,12 +510,12 @@
   #define DEFAULT_REPORT_INCHES 0 // false
   #define DEFAULT_INVERT_ST_ENABLE 0 // false
   #define DEFAULT_INVERT_LIMIT_PINS 0 // false
-  #define DEFAULT_SOFT_LIMIT_ENABLE 1 // true
-  #define DEFAULT_HARD_LIMIT_ENABLE 0  // false
+  #define DEFAULT_SOFT_LIMIT_ENABLE 0 // true
+  #define DEFAULT_HARD_LIMIT_ENABLE 1  // false
   #define DEFAULT_INVERT_PROBE_PIN 0 // false
   #define DEFAULT_LASER_MODE 0 // false
   #define DEFAULT_HOMING_ENABLE 1  // true
-  #define DEFAULT_HOMING_DIR_MASK 0 // move positive dir
+  #define DEFAULT_HOMING_DIR_MASK 3 // move positive dir
   #define DEFAULT_HOMING_FEED_RATE 100.0 // mm/min
   #define DEFAULT_HOMING_SEEK_RATE 500.0 // mm/min
   #define DEFAULT_HOMING_DEBOUNCE_DELAY 250 // msec (0-65k)
